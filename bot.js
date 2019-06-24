@@ -23,7 +23,25 @@ client.on('message', message => {
 
 });
 
- 
+// Create an event listener for messages
+client.on('message', message => {
+  // If the message is "what is my avatar"
+  if (message.content === '/avatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
+  }
+});
+
+
+client.on('message', message => {
+    // If the message is '!rip'
+    if (message.content === '/rules') {
+        // Create the attachment using Attachment
+        const attachment = new Attachment('./rules.txt');
+        // Send the attachment in the message channel
+        message.channel.send(attachment);
+    }
+});
 
 // THIS  MUST  BE  THIS  WAY
 
