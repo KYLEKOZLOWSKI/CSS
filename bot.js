@@ -14,11 +14,12 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-    if (message.content === 'ping') {
+    if (message.content === '/staff') {
 
-       message.reply('pong');
-
-       }
+       message.reply('Icyz | Owner');
+       message.reply('BlueLightning | Advertising');
+       message.reply('Grimbleweed | Special');
+    }
 
 });
 
